@@ -23,18 +23,6 @@ body{
     position: relative;
 }
 
-main{
-    width: 75vw;
-    height: 70vh;
-    background-color: #020659;
-    border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-}
-
 #placar{
     width: 100%;
     height: 25%;
@@ -80,6 +68,18 @@ main{
     transform: translate(0%, -50%);
 }
 
+main{
+    width: 75vw;
+    height: 50vh;
+    background-color: #020659;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
 #jogo{
     width: 100%;
     height: 75%;
@@ -87,8 +87,8 @@ main{
 }
 
 #teclado{
-    width: 83%;
-    height: 85%;
+    width: 63vw;
+    height: 63vw;
     background-color: rgba(128, 128, 128, 0.11);
     display: flex;
     flex-direction: row;
@@ -103,8 +103,8 @@ main{
 }
 
 button{
-    width: 90px;
-    height: 90px;
+    width: 20vw;
+    height: 20vw;
     background-color: #020659;
     border: none;
     outline: none;
