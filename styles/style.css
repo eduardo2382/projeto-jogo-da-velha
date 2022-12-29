@@ -5,4 +5,108 @@
 
     Azul Escuro - #010440
     Azul Claro - #020659
+    Lilas - #2E038C
 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #010440;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+main{
+    width: 75vw;
+    height: 70vh;
+    background-color: #020659;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+#placar{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#placar div{
+    display: inline-block;
+    width: 30%;
+    height: 70%;
+    position: relative;
+}
+
+#vez{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+#vez_cross{
+    color: rgba(255, 255, 255, 0.096);
+    font-size: 70px;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translate(-100%, -50%);
+}
+
+#vez_circle{
+    font-weight: 100;
+    color: rgba(255, 255, 255, 0.096);
+    font-size: 70px;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+#jogo{
+    width: 100%;
+    height: 75%;
+    position: relative;
+}
+
+#teclado{
+    width: 83%;
+    height: 85%;
+    background-color: rgba(128, 128, 128, 0.11);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button{
+    width: 90px;
+    height: 90px;
+    background-color: #020659;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
