@@ -9,6 +9,7 @@ var cross_vez = document.getElementById('vez_cross')
 
 var jogo = [[ , , ,], [ , , ,], [ , , ,]]
 var fim = false
+var velha = false
 
 var vez = undefined
 mudarVez()
@@ -616,6 +617,7 @@ function verificarJogo(array){
         finalizarJogo()
 
     } else if(verificarVelha(array) == true){
+        velha = true
         finalizarJogo()    
     }
     
@@ -626,10 +628,14 @@ function finalizarJogo(){
     fim = true
     modal.style.opacity = '1'
     modal.style.display = 'block'
-    if(vez == 0){
-        vencedor.innerText = 'Vencedor: O'
-    } else if(vez == 1){
-        vencedor.innerText = 'Vencedor: X'
+    if(velha != true){
+        if(vez == 0){
+            vencedor.innerText = 'Vencedor: O'
+        } else if(vez == 1){
+            vencedor.innerText = 'Vencedor: X'
+        }
+    } else{
+        vencedor.innerText = 'Empate'
     }
     restart.addEventListener('click', function(){
         modal.style.opacity = '0'
@@ -638,6 +644,7 @@ function finalizarJogo(){
         for(let i = 0; i < buttons.length; i++){
             buttons[i].style.backgroundImage = 'none'
         }
+        velha = false
         jogo = [[ , , ,], [ , , ,], [ , , ,]]
 
     })
